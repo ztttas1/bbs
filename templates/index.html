@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Bulletin Board</title>
+</head>
+<body>
+    <h1>Simple Bulletin Board</h1>
+    <form method="post">
+        <textarea name="content" required></textarea>
+        <button type="submit">Post</button>
+    </form>
+    <h2>Posts</h2>
+    {% for post in posts %}
+    <div>
+        <p>{{ post.content }}</p>
+    </div>
+    {% endfor %}
+</body>
+</html>
